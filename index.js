@@ -34,7 +34,8 @@ function calcularPromedioDeCantidad(listaPedidos) {
   listaPedidos.forEach(function (pedido) {
     total = total + pedido.cantidad;
   });
-  console.log(total);
+  const cantidad = listaPedidos.length;
+  return total / cantidad;
 }
-
-calcularPromedioDeCantidad(listaPedidos);
+const promedio = calcularPromedioDeCantidad(listaPedidos);
+alert(`El promedio de productos por persona es ${promedio}`);
