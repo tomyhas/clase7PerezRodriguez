@@ -1,3 +1,8 @@
+//Tuve la idea de hacer una herramienta que me permita ingresar la cantidad de personas que quieran pedir un determinado tipo de producto y -->
+//que luego tenga la posibilidad de elegir la cantidad para cada cliente, al final se calcula el promedio de la cantidad de productos pedidos por persona.
+
+// Con esta función me aseguro de que ingrese si o si la cantidad de personas en formato numérico
+
 function leerNumero(mensaje) {
   let numeroLeido = NaN;
   do {
@@ -6,7 +11,9 @@ function leerNumero(mensaje) {
   return numeroLeido;
 }
 
-const cantidadPersonas = leerNumero("Ingrese la cantidad de personas");
+const cantidadPersonas = leerNumero(
+  "Ingrese la cantidad de personas que harán el pedido"
+);
 
 const listaPedidos = [];
 
@@ -29,6 +36,7 @@ for (let index = 0; index < cantidadPersonas; index++) {
   );
 }
 
+//Para calcular el promedio de productos pedidos por persona.
 function calcularPromedioDeCantidad(listaPedidos) {
   let total = 0;
   listaPedidos.forEach(function (pedido) {
